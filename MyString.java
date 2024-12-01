@@ -15,6 +15,12 @@ public class MyString {
         System.out.println(contains("personality", "dad")); // false
         System.out.println(contains("resignation", "sign")); // true
         System.out.println(contains("resignation", "sign")); // true
+
+        System.out.println("Test 1 (contains 'baba'): " + contains("baba yaga", "baba"));
+        System.out.println("Test 2 (contains empty string): " + contains("baba yaga", ""));
+        System.out.println("Test 3 (contains 'John Wick is the baba yaga'): " + !contains("baba yaga", "John Wick is the baba yaga"));
+        System.out.println("Test 4 (contains 'Yaga'): " + !contains("baba yaga", "Yaga"));
+        System.out.println("Test 5 (contains 'babayaga'): " + !contains("baba yaga", "babayaga"));
     }
 
     /** Returns the lowercase version of the given string. */
