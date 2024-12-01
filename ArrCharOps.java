@@ -10,7 +10,6 @@ public class ArrCharOps {
         System.out.println(charAt(arr1,2));      
         System.out.println(indexOf(arr1,'l'));  
         System.out.println(indexOf(arr1,'l',3)); 
-        System.out.println(lastIndexOf(arr1, 'l'));
         System.out.println(concat(arr1, arr2));
         System.out.println(subArray(arr2, 2, 9));
         System.out.println(compareTo("abcd", "abcd"));
@@ -79,7 +78,7 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int lastIndexOf(char[] arr, char ch) {
-        for (int i = arr.length; i > 0; i--) {
+        for (int i = arr.length - 1; i > 0; i--) {
             if(arr[i] == ch) return i;
         }
 
