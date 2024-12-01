@@ -7,19 +7,21 @@ public class ArrCharOps {
         char[] arr2 = {'U','n','d','e','r','s','t', 'o', 'o', 'd'};
         System.out.println(str);  // Prints the string
         println(arr1);            // Prints an array of characters
-        System.out.println(charAt(arr1,2));      
-        System.out.println(indexOf(arr1,'l'));  
-        System.out.println(indexOf(arr1,'l',3)); 
-        System.out.println(concat(arr1, arr2));
-        System.out.println(subArray(arr2, 2, 9));
-        System.out.println(compareTo("abcd", "abcd"));
-        System.out.println(compareTo("abc", "abcd"));
-        System.out.println(compareTo("abw", "abcd"));
-        System.out.println(compareTo("Abcd", "a"));
-        System.out.println(compareTo("apple", "banana"));
-        System.out.println(compareTo("apple", "applepie"));
-        System.out.println(compareTo("Zoo", "zoo"));
-        System.out.println(hashCode(arr1));
+        // System.out.println(charAt(arr1,2));      
+        // System.out.println(indexOf(arr1,'l'));  
+        // System.out.println(indexOf(arr1,'l',3)); 
+        // System.out.println(concat(arr1, arr2));
+        // System.out.println(subArray(arr2, 2, 9));
+        // System.out.println(compareTo("abcd", "abcd"));
+        // System.out.println(compareTo("abc", "abcd"));
+        // System.out.println(compareTo("abw", "abcd"));
+        // System.out.println(compareTo("Abcd", "a"));
+        // System.out.println(compareTo("apple", "banana"));
+        // System.out.println(compareTo("apple", "applepie"));
+        // System.out.println(compareTo("Zoo", "zoo"));
+        System.out.println(hashCode(new char[]{'a'}));
+        System.out.println(hashCode(new char[]{}));
+        System.out.println(hashCode(("lemon".toCharArray())));
         System.out.println(hashCode(arr2));
     }
 
@@ -124,15 +126,15 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        long hash = 0;
+        double hash = 0;
 
-        if (arr.length == 0) return hash;
+        if (arr.length == 0) return (long) hash;
 
         for (int i = 0; i < arr.length; i++) {
-            hash = (long) (hash + arr[0] * Math.pow(7, arr.length - (i+1)));
+            hash = (hash + arr[i] * Math.pow(7, arr.length - (i+1)));
         }
 
-        return hash;
+        return (long) hash;
     }
 
     /**
